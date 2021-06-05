@@ -1,5 +1,5 @@
 body {
-    background: #ffe7ec;
+    background: #F2CFBB;
     vertical-align: center;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
 }
 
 .divAuthorization {
-    background-color: #292122;
+    background-color: #D9998B;
     width: 400px;
     height: 500px;
     display: flex;
@@ -29,7 +29,7 @@ body {
     height: 50px;
     border-bottom: 1px solid transparent;
     border-right: 1px solid transparent;
-    color: #ffe7ec;
+    color: #fff;
     font-size: 18px;
     margin: 0;
     padding: 0;
@@ -41,9 +41,9 @@ body {
     justify-content: center;
     width: 49%;
     height: 50px;
-    border-bottom: 1px solid #ffe7ec;
-    border-left: 1px solid #ffe7ec;
-    color: #ffe7ec;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    color: #fff;
     font-size: 18px;
     margin: 0;
     padding: 0;
@@ -61,15 +61,34 @@ body {
     height: 449px;
     display: none;
     padding: 0 50px;
+    text-align: center;
 }
 
 .divSignInEmailSubheader,
 .divSignInPasswordSubheader {
-    color: #ffe7ec;
+    color: #fff;
     margin-top: 50px;
     padding: 0;
     font-size: 16px;
     text-align: left;
+}
+
+.divSignInPasswordSubheader{
+    margin-top: 25px;
+}
+
+.divSignInEmailError {
+    height: 15px;
+    margin: 5px 0 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.divCreateAnAccountEmailError {
+    height: 15px;
+    margin: 5px 0 5px;
+    color: #fff;
+    font-size: 14px;
 }
 
 .inputSignInEmail,
@@ -78,10 +97,10 @@ body {
     width: 100%;
     margin-top: 20px;
     background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #ffe7ec;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #fff;
     font-size: 14px;
-    color: #ffe7ec;
+    color: #fff;
 }
 
 .inputSignInEmail:focus,
@@ -95,26 +114,30 @@ body {
     width: 200px;
     height: 40px;
     margin: 70px auto 0;
-    background-color: #ffe7ec;
+    background-color: #fff;
     border: 1px solid transparent;
-    color: #292122;
+    color: #D9998B;
     font-size: 16px;
 }
 
 .pForgotPassword {
     font-size: 14px;
-    color: #ffe7ec;
+    color: #fff;
     margin: 20px 0;
 }
 
 .divCreateAnAccountEmailSubheader,
 .divCreateAnAccountPasswordSubheader,
 .divCreateAnAccountRepeatPasswordSubheader {
-    color: #ffe7ec;
+    color: #fff;
     margin-top: 40px;
     padding: 0;
     font-size: 16px;
     text-align: left;
+}
+
+.divCreateAnAccountPasswordSubheader {
+    margin-top: 15px;
 }
 
 .inputCreateAnAccountEmail,
@@ -124,14 +147,15 @@ body {
     width: 100%;
     margin-top: 20px;
     background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #ffe7ec;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #fff;
     font-size: 14px;
-    color: #ffe7ec;
+    color: #fff;
 }
 
 .inputCreateAnAccountEmail:focus,
-.inputCreateAnAccountPassword:focus {
+.inputCreateAnAccountPassword:focus,
+.inputCreateAnAccountRepeatPassword:focus {
     outline: none;
     background-color: transparent;
 }
@@ -140,10 +164,10 @@ body {
     display: block;
     width: 200px;
     height: 40px;
-    margin: 35px auto 0;
-    background-color: #ffe7ec;
+    margin: 20px auto 0;
+    background-color: #fff;
     border: 1px solid transparent;
-    color: #292122;
+    color: #D9998B;
     font-size: 16px;
 }
 
@@ -151,3 +175,18 @@ body {
 .buttonSignIn:hover {
     opacity: 0.9;
 }
+
+.divCheckingPasswords {
+    height: 15px;
+    margin: 5px 0 5px;
+    color: #fff;
+    font-size: 13px;
+}
+
+
+/* Color Theme Swatches in Hex */
+.SHUUEMURA-1-hex { color: #D9A491; }
+.SHUUEMURA-2-hex { color: #F2D5CE; }
+.SHUUEMURA-3-hex { color: #A6A6A6; }
+.SHUUEMURA-4-hex { color: #404040; }
+.SHUUEMURA-5-hex { color: #0D0D0D; }
