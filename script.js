@@ -75,7 +75,10 @@ inputSignInEmail.onfocus = function () {
     divSignInEmailError.innerHTML = '';
     inputSignInEmail.style.border = '1px solid transparent';
     inputSignInEmail.style.borderBottom = '1px solid #F2D5CE';
-}
+    inputSignInPassword.style.border = '1px solid transparent';
+    inputSignInPassword.style.borderBottom = '1px solid #F2D5CE';
+    divSignInError.textContent = '';
+};
 
 let divSignInPasswordSubheader = document.createElement('div');
 divSignInPasswordSubheader.className = 'divSignInPasswordSubheader';
@@ -87,6 +90,20 @@ inputSignInPassword.className = 'inputSignInPassword';
 inputSignInPassword.type = 'password';
 divSignInContent.append(inputSignInPassword);
 
+inputSignInPassword.onfocus = function () {
+    inputSignInPassword.style.border = '1px solid transparent';
+    inputSignInPassword.style.borderBottom = '1px solid #F2D5CE';
+    divSignInError.textContent = '';
+    if (!inputSignInEmail.value) {
+        inputSignInEmail.style.border = '1px solid transparent';
+        inputSignInEmail.style.borderBottom = '1px solid #F2D5CE';
+    }
+};
+
+let divSignInError = document.createElement('div');
+divSignInError.className = 'divSignInError';
+divSignInContent.append(divSignInError);
+
 let buttonSignIn = document.createElement('button');
 buttonSignIn.className = 'buttonSignIn';
 buttonSignIn.textContent = 'Sign In';
@@ -96,6 +113,17 @@ let pForgotPassword = document.createElement('p');
 pForgotPassword.className = 'pForgotPassword';
 pForgotPassword.textContent = 'Forgot your password?';
 divSignInContent.append(pForgotPassword);
+
+//Проверяет, заполнены ли все поля ввода
+
+buttonSignIn.onclick = function () {
+    if (!inputSignInEmail.value || !inputSignInPassword.value) {
+        buttonSignIn.disabled = true;
+        inputSignInPassword.style.border = '1px solid white';
+        inputSignInEmail.style.border = '1px solid white';
+        divSignInError.textContent = 'Please fill in all the fields!'
+    }
+}
 
 //Наполнение второго блока с регистрацией
 
@@ -132,6 +160,7 @@ inputCreateAnAccountEmail.onfocus = function () {
     divCreateAnAccountEmailError.innerHTML = '';
     inputCreateAnAccountEmail.style.border = '1px solid transparent';
     inputCreateAnAccountEmail.style.borderBottom = '1px solid #F2D5CE';
+    divCheckingPasswords.textContent = '';
 }
 
 let divCreateAnAccountPasswordSubheader = document.createElement('div');
@@ -198,6 +227,10 @@ inputCreateAnAccountPassword.onfocus = function () {
     inputCreateAnAccountPassword.style.borderBottom = '1px solid #F2D5CE';
     inputCreateAnAccountRepeatPassword.style.border = '1px solid transparent';
     inputCreateAnAccountRepeatPassword.style.borderBottom = '1px solid #F2D5CE';
+    if (!inputCreateAnAccountEmail.value) {
+        inputCreateAnAccountEmail.style.border = '1px solid transparent';
+        inputCreateAnAccountEmail.style.borderBottom = '1px solid #F2D5CE';
+    }
 }
 
 inputCreateAnAccountRepeatPassword.onfocus = function () {
@@ -206,10 +239,24 @@ inputCreateAnAccountRepeatPassword.onfocus = function () {
     inputCreateAnAccountPassword.style.borderBottom = '1px solid #F2D5CE';
     inputCreateAnAccountRepeatPassword.style.border = '1px solid transparent';
     inputCreateAnAccountRepeatPassword.style.borderBottom = '1px solid #F2D5CE';
+    if (!inputCreateAnAccountEmail.value) {
+        inputCreateAnAccountEmail.style.border = '1px solid transparent';
+        inputCreateAnAccountEmail.style.borderBottom = '1px solid #F2D5CE';
+    }
 }
 
 let buttonCreateAnAccount = document.createElement('button');
 buttonCreateAnAccount.className = 'buttonCreateAnAccount';
 buttonCreateAnAccount.textContent = 'Create an account';
 divCreateAnAccountContent.append(buttonCreateAnAccount);
+
+buttonCreateAnAccount.onclick = function () {
+    if (!inputCreateAnAccountEmail.value || !inputCreateAnAccountPassword.value || !inputCreateAnAccountRepeatPassword.value) {
+        buttonCreateAnAccount.disabled = true;
+        inputCreateAnAccountPassword.style.border = '1px solid white';
+        inputCreateAnAccountEmail.style.border = '1px solid white';
+        inputCreateAnAccountRepeatPassword.style.border = '1px solid white';
+        divCheckingPasswords.innerHTML = 'Please fill in all the fields!'
+    };
+}
 

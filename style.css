@@ -109,11 +109,18 @@ body {
     background-color: transparent;
 }
 
+.divSignInError {
+    height: 15px;
+    margin: 15px 0 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
 .buttonSignIn {
     display: block;
     width: 200px;
     height: 40px;
-    margin: 70px auto 0;
+    margin: 35px auto 0;
     background-color: #fff;
     border: 1px solid transparent;
     color: #D9998B;
@@ -169,11 +176,6 @@ body {
     border: 1px solid transparent;
     color: #D9998B;
     font-size: 16px;
-}
-
-.buttonCreateAnAccount:hover,
-.buttonSignIn:hover {
-    opacity: 0.9;
 }
 
 .divCheckingPasswords {
